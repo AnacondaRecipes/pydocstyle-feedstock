@@ -40,6 +40,7 @@ test:
 about:
   home: https://github.com/PyCQA/pydocstyle
   license: MIT
+  license_url: https://github.com/PyCQA/pydocstyle/blob/master/LICENSE-MIT
   license_file: LICENSE-MIT
   summary: Python docstring style checker (formerly pep257)
   description: |
@@ -49,7 +50,7 @@ about:
     The framework for checking docstring style is flexible, and custom checks
     can be easily added, for example to cover NumPy docstring conventions.
     pydocstyle supports Python 3.4, 3.5, 3.6, and 3.7.
-  doc_url: http://pydocstyle.readthedocs.org
+  doc_url: https://www.pydocstyle.org/en/stable/
   dev_url: https://github.com/PyCQA/pydocstyle
 
 extra:

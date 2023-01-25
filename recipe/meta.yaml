@@ -1,6 +1,6 @@
 {% set name = "pydocstyle" %}
-{% set version = "6.1.1" %}
-{% set hash = "1d41b7c459ba0ee6c345f2eb9ae827cab14a7533a88c5c6f7e94923f72df92dc" %}
+{% set version = "6.3.0" %}
+{% set hash = "7ce43f0c0ac87b07494eb9c0b462c0b73e6ff276807f204d6b53edc72b7e44e1" %}
 
 package:
   name: {{ name }}
@@ -11,8 +11,8 @@ source:
   sha256: {{ hash }}
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: True # [py<38]
   number: 0
   entry_points:
     - pydocstyle = pydocstyle.cli:main
@@ -21,11 +21,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
+    - setuptools
+    - wheel
+    - poetry-core
 
   run:
-    - python >=3.6
-    - snowballstemmer
+    - python
+    - snowballstemmer >=2.2.0
+    - tomli >=1.2.3
 
 test:
   imports:

@@ -34,9 +34,12 @@ requirements:
 test:
   imports:
     - pydocstyle
+  requires:
+    - pip
   commands:
+    - pip check
     - pydocstyle --version
-
+    
 about:
   home: https://github.com/PyCQA/pydocstyle
   license: MIT

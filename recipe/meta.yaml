@@ -12,11 +12,10 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: True # [py<38]
+  skip: True # [py<36]
   number: 0
   entry_points:
     - pydocstyle = pydocstyle.cli:main
-
 
 requirements:
   host:
@@ -25,11 +24,11 @@ requirements:
     - setuptools
     - wheel
     - poetry-core
-
   run:
     - python
     - snowballstemmer >=2.2.0
-    - tomli >=1.2.3
+    - tomli >=1.2.3  # [py<311]
+    - importlib-metadata >=2.0.0,<5.0.0  # [py<38]
 
 test:
   imports:

@@ -12,7 +12,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: True # [py<37]
+  skip: True # [py<38]
   number: 0
   entry_points:
     - pydocstyle = pydocstyle.cli:main

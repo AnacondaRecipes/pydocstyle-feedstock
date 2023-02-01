@@ -51,9 +51,9 @@ about:
     but it should not be considered a reference implementation.
     The framework for checking docstring style is flexible, and custom checks
     can be easily added, for example to cover NumPy docstring conventions.
-    pydocstyle supports Python 3.6 and higher.
+    pydocstyle supports Python 3.7 through 3.11.
   doc_url: https://www.pydocstyle.org/en/stable/
-  dev_url: https://github.com/PyCQA/pydocstyle 
+  dev_url: https://github.com/PyCQA/pydocstyle
 
 extra:
   recipe-maintainers:
